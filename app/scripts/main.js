@@ -28,14 +28,3 @@ $(function() {
 });
 });
 
-//to animate the interest list
-$('.interests-list').hide();
-
-$('#interests').click(function() {
-	'use strict';
-//window.alert('clicked interests');
-$(this).find('ul').stop().animate({
-	width:'toggle'
-});
-});
-
