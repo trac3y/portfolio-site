@@ -2,8 +2,6 @@
   "name": "portfolio-site",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
-    "jquery.scrollTo": "~2.1.0",
-    "scrollmagic": "~2.0.5"
+    "bootstrap-sass-official": "~3.2.0"
   }
 }
