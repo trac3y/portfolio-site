@@ -1,14 +1,19 @@
 $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800,600);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:400,300,600);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-$font-nav: 'Open Sans', sans-serif;
-$font-body: 'Lato', sans-serif;
-$font-title: 'Raleway', sans-serif;
-$font-main: 'Montserrat', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Inconsolata:400,700);
+$font-nav: 'Inconsolata';
+$font-body: 'Inconsolata', sans-serif;
+$font-title: 'Poppins', sans-serif;
+$font-main: 'Inconsolata', sans-serif;
 
-$primary-color: #00A388;
-$dark: #111111;
+$accent-cool: #72c9c1;
+$accent-warm: #ff6b61;
+$black: #333333;
+$white: #ffffff;
+$dark: #7994a6;
+$light-warm: #f4f4f4;
+$light-cool: #eaedf0;
+
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -26,22 +31,17 @@ html, body, section {
 section {
   padding-top: 15rem;
   position: relative;
-  .container {
-    top: 50%;
-  }
-}
-
-.body-wrapper {
-  margin-left: 4rem;
-  margin-right: 4rem;
 }
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   font: 150% $font-body;
   margin: 0;
+
+  p, h1, h2, h3, h4 {
+    color: $dark;
+  }
 
   p {
     letter-spacing: 1px;
@@ -70,106 +70,71 @@ body {
 
 //////////////////////////////// TEXT /////////////////////////////////////////
 strong {
-  color: $primary-color;
+  color: $accent-cool;
+}
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
 }
 
 a {
-  color: #000000;
-}
-
-a:hover {
-  color: #00A388;
-  text-decoration: none;
-  -webkit-transition:color 0.5s ease-in;
-  i {
-    color: #00A388;
-    -webkit-transition:color 0.5s ease-in;
+  position: relative;
+  color: $dark;
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $accent-warm;
+    transition: width .3s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;  
+    }
   }
 }
 
-a, a:hover, a:active, a:visited {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-}
 
 //////////////////////////////// NAVIGATION //////////////////////////////////
-// header / navbar
-.header {
-  margin-bottom: 20px;
-  .navbar-default .nav .navbar-nav {
-    li {
-      color: #000000;
-    }
-    .active {
-      color: #00A388;
-    }
-  }
-}
-
-#navigation-container {
-  width: 100%;
-}
 
 .sticky {
-  background-color: #000;
+  background-color: $dark;
   a {
-    color: #fff;
+    color: $white;
+    &:after {
+      background-color: $white;
+    }
   }
-  a:hover {
-    color: #00A388;
-  }
-}
-
-#nav {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-default {
-  background-color: #fff;
-  border-color: #fff;
 }
 
 .navbar-nav {
   float: none;
-  text-align: center;
   width: 100%;
 
   li {
     display: inline-block;
-    float: none;
+    float: right;
     font: 100% $font-nav;
-    font-weight: 600;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 3em;
+  }
+
+  #home {
+    float: left;
+    .home-button {
+      &:after {
+        background: none;
+      }  
+    }
+    
   }
 }
 
 .top-nav-collapse {
-  color: #fff;
   width: 100%;
   padding: 0; 
 }
 
-#main {
-  #fade {
-    display: none;
-  }
-}
-
-#resume {
-  .resume-download {
-    text-align: center;
-    padding: 20px 0px 0px;
-  }
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -186,17 +151,15 @@ ul {
   .top-nav-collapse {
     padding: 0;
   }
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+//////////////////////////////// ABOUT //////////////////////////////////
+#about-section {
+  background-color: $light-warm;
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+  .intro-text {
+    padding-left: 3em;
+    padding-right: 3em;
   }
 }
 

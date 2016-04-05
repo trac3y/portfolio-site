@@ -19,13 +19,13 @@ $(window).scroll(function() {
 $(function() {
 	'use strict';
 	$('a.page-scroll').bind('click', function(event) {
-	//window.alert('clicked a thing');
-	var $anchor = $(this);
-	$('html, body').stop().animate({
+		//window.alert('clicked a thing');
+		var $anchor = $(this);
+		$('html, body').stop().animate({
 		scrollTop: $($anchor.attr('href')).offset().top
-	}, 1500, 'easeInOutExpo');
-	event.preventDefault();
-});
+		}, 1500, 'easeInOutExpo');
+		event.preventDefault();
+	});
 });
 
 
