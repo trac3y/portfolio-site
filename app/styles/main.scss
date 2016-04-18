@@ -38,6 +38,7 @@ body {
   padding-bottom: 30px;
   font: 150% $font-body;
   margin: 0;
+  background-color: $light-warm;
 
   p, h1, h2, h3, h4 {
     color: $dark;
@@ -154,14 +155,8 @@ a {
 }
 
 //////////////////////////////// ABOUT //////////////////////////////////
-#about-section {
-  background-color: $light-warm;
 
-  .intro-text {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-}
+
 
 //////////////////////////////// SVG //////////////////////////////////
 path {
