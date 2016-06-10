@@ -5,7 +5,7 @@ $font-body: 'Inconsolata', sans-serif;
 $font-title: 'Poppins', sans-serif;
 $font-main: 'Inconsolata', sans-serif;
 
-$accent-cool: #72c9c1;
+$accent-cool: #73c6a8;
 $accent-warm: #ff6b61;
 $black: #333333;
 $white: #ffffff;
@@ -24,13 +24,19 @@ $light-cool: #eaedf0;
 
 //////////////////////////////// LAYOUT /////////////////////////////////////////
 
-html, body, section {
+html, body {
+  width: 100%;
   height: 100%;
 }
 
 section {
-  padding-top: 15rem;
-  position: relative;
+  height: 100vh;
+  display: block;
+}
+
+canvas {
+  display: block;
+  border: 3px solid $dark;
 }
 
 /* Space out content a bit */
@@ -91,7 +97,7 @@ a {
   }
   &:hover {
     &:after {
-      width: 100%;  
+      width: 100%;
     }
   }
 }
@@ -125,15 +131,15 @@ a {
     .home-button {
       &:after {
         background: none;
-      }  
+      }
     }
-    
+
   }
 }
 
 .top-nav-collapse {
   width: 100%;
-  padding: 0; 
+  padding: 0;
 }
 
 
@@ -174,4 +180,3 @@ path {
     stroke-dashoffset: 0;
   }
 }
-
