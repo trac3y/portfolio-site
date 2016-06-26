@@ -35,7 +35,7 @@
     </div>
     <!-- END NAVIGATION -->
     <section id="intro-section">
-      <canvas id="myCanvas">
+      <canvas id="myCanvas" resize="true">
         Your browser does not support the HTML5 canvas tag.s
       </canvas>
     </section>
@@ -83,7 +83,12 @@
   </script>
 
   <!-- build:js({app,.tmp}) scripts/main.js -->
-  <script src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+<!-- Load the Paper.js library -->
+  <script type="text/javascript" src="scripts/paper-full.min.js"></script>
+  <!-- Load external PaperScript and associate it with canvas -->
+  <script type="text/paperscript" src="scripts/wave.js" canvas="myCanvas"></script>
+
   <!-- endbuild -->
 </body>
 </html>

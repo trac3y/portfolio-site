@@ -1,23 +1,26 @@
-(function() {
-	'use strict';
-	var canvas = document.getElementById('myCanvas');
-	if (canvas.getContext) {
-		var ctx = canvas.getContext('2d');
-	}
-	// resize the canvas to fill browser window dynamically and draw
-	window.addEventListener('resize', resizeCanvas, false);
-
-	function resizeCanvas() {
-		console.log('resizeCanvas being used');
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
-		draw();
-	}
-	resizeCanvas();
-
-	function draw() {
-	}
-})();
+// (function() {
+// 	'use strict';
+// 	var canvas = document.getElementById('myCanvas');
+// 	if (canvas.getContext) {
+// 		var ctx = canvas.getContext('2d');
+// 	}
+//
+// 	// resize the canvas to fill browser window dynamically and draw
+// 	window.addEventListener('resize', resizeCanvas, false);
+//
+// 	function resizeCanvas() {
+// 		canvas.width = window.innerWidth;
+// 		canvas.height = window.innerHeight;
+// 		draw();
+// 	}
+// 	resizeCanvas();
+//
+// 	function draw() {
+//
+// 		// ctx.fillStyle = "#73c6a8";
+//
+// 	}
+// })();
 
 // Document on load
 $( document ).ready(function() {
