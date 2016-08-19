@@ -22,9 +22,24 @@
 // 	}
 // })();
 
+// Global variables that can  passed from PaperScript and regular JS
+// To be populated in PaperScript
+window.globals = {
+	flooded: false
+};
+
 // Document on load
 $( document ).ready(function() {
 	'use strict';
+
+// event to check flooding to be changed
+	$( this ).click( function() {
+		if (globals.flooded) {
+			console.log('this is being called in main. flooded!');
+			$( '#about-section' ).css( 'background-color', '#ff6b61' );
+		}
+	});
+
 });
 
 //to collapse the navbar on scroll

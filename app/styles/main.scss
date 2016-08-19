@@ -40,6 +40,10 @@ canvas {
   height: 100%;
 }
 
+#myCanvas {
+  // height: 200vh;
+}
+
 /* Space out content a bit */
 body {
   padding-bottom: 30px;
@@ -119,6 +123,12 @@ a {
 .navbar-nav {
   float: none;
   width: 100%;
+  a {
+    color: $white;
+    &:after {
+      background-color: $accent-cool;
+    }
+  }
 
   li {
     display: inline-block;
