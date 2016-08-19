@@ -2,7 +2,7 @@ var center, width, height, pathHeight;
 var points = 10; // number of points in path
 var path = new Path();
 
-globals.flooded = false;
+// globals.flooded = false;
 
 initializePath();
 
@@ -10,8 +10,8 @@ function initializePath() {
   // center = view.center/2;
   center = view.center;
   width = view.size.width;
-  height = view.size.height - 200;
-  // height = view.size.height - 1000;
+  // height = view.size.height - 200;
+  height = view.size.height - 1000;
   path.segments = [];
   path.add(view.bounds.topLeft);
   path.add(new Point(10, center.y));

@@ -41,7 +41,9 @@ canvas {
 }
 
 #myCanvas {
-  // height: 200vh;
+  height: 200vh;
+  position: absolute;
+  z-index: -1;
 }
 
 /* Space out content a bit */
@@ -105,6 +107,23 @@ a {
       width: 100%;
     }
   }
+}
+
+/////////////////////////////// BUTTONS ///////////////////////////////////////
+@mixin button($color) {
+  color: $color;
+  border: 2px solid $color;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.intro-button {
+  @include button(white);
+  // position:
 }
 
 
@@ -171,8 +190,24 @@ a {
   }
 }
 
-//////////////////////////////// ABOUT //////////////////////////////////
+//////////////////////////////// INTRO //////////////////////////////////
+.intro-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  padding: 0 50px;
+}
 
+.intro-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  text-align: center;
+
+  h1 {
+    color: white;
+  }
+}
 
 
 //////////////////////////////// SVG //////////////////////////////////

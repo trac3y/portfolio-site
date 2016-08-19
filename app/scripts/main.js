@@ -28,15 +28,23 @@ window.globals = {
 	flooded: false
 };
 
+var flood = function() {
+	console.log('this is being called in main. flooding!');
+	globals.flooded = true;
+	console.log(window.globals.flooded);
+}
+
 // Document on load
 $( document ).ready(function() {
 	'use strict';
 
-// event to check flooding to be changed
-	$( this ).click( function() {
-		if (globals.flooded) {
-			console.log('this is being called in main. flooded!');
-			$( '#about-section' ).css( 'background-color', '#ff6b61' );
+	// Flood screen on scroll and click of button
+	$( '.intro-button' ).click( flood );
+
+	$( window ).scroll(function() {
+		var offset = $( window ).scrollTop();
+		if ( offset > 30 ) {
+			flood();
 		}
 	});
 
