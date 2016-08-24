@@ -39,11 +39,19 @@ canvas {
   width: 100%;
   height: 100%;
 }
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 #myCanvas {
-  height: 200vh;
+  height: 180vh;
   position: absolute;
   z-index: -1;
+}
+
+#about-section {
+  height: 80vh;
 }
 
 /* Space out content a bit */
@@ -62,29 +70,46 @@ body {
   }
 
   h1 {
-    font: 400% $font-title;
+    font: 450% $font-title;
     font-weight: 800;
     letter-spacing: 2px;
   }
+
   h2 {
-    font: 300% $font-title;
+    font: 350% $font-title;
     font-weight: 600;
+    line-height: 1.2em;
   }
 
   h3 {
     font: 200% $font-title;
     font-weight: 600;
+    line-height: 1.3em;
   }
 
   h4 {
     font: 150% $font-title;
     font-weight: 400;
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .inline-list li {
+    display: inline-block;
+  }
+
 }
 
 //////////////////////////////// TEXT /////////////////////////////////////////
 strong {
   color: $accent-cool;
+}
+
+span {
+  display: inline-block;
 }
 
 a, a:hover, a:active, a:focus {
@@ -97,14 +122,15 @@ a {
   &:after {
     content: '';
     display: block;
-    width: 0;
-    height: 2px;
+    width: 100%;
+    height: 3px;
     background: $accent-warm;
     transition: width .3s;
+    margin-top: 2px;
   }
   &:hover {
     &:after {
-      width: 100%;
+      width: 80%;
     }
   }
 }
@@ -123,14 +149,12 @@ a {
 
 .intro-button {
   @include button(white);
-  // position:
 }
-
 
 //////////////////////////////// NAVIGATION //////////////////////////////////
 
 .sticky {
-  background-color: $dark;
+  background-color: $accent-warm;
   a {
     color: $white;
     &:after {
@@ -146,6 +170,12 @@ a {
     color: $white;
     &:after {
       background-color: $accent-cool;
+      width: 0;
+    }
+  }
+  a:hover {
+    &:after {
+      width: 80%;
     }
   }
 
@@ -159,6 +189,7 @@ a {
   #home {
     float: left;
     .home-button {
+      padding-left: 40px;
       &:after {
         background: none;
       }
@@ -175,9 +206,9 @@ a {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+  // .container {
+  //   max-width: 730px;
+  // }
 
   .navbar {
     padding: 20px 0;
@@ -208,6 +239,36 @@ a {
     color: white;
   }
 }
+
+///////////////////////////////// ABOUT ///////////////////////////////////
+#about-section {
+  .about-content {
+    padding-bottom: 1em;
+    h1, h2, h3, h4, a {
+      color: $white;
+    }
+    a:after {
+      background-color: $white;
+    }
+  }
+
+  .contact {
+    ul {
+      li {
+        display: inline-block;
+        padding-right: 1em;
+        a {
+          color: $white;
+          &:after {
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 
 //////////////////////////////// SVG //////////////////////////////////

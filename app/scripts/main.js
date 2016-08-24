@@ -39,7 +39,12 @@ $( document ).ready(function() {
 	'use strict';
 
 	// Flood screen on scroll and click of button
-	$( '.intro-button' ).click( flood );
+	$( '.intro-button' ).click( function() {
+		$( 'html, body' ).animate({
+			scrollTop: $( '#about-section' ).offset().top - 300
+		}, 900);
+		flood();
+	});
 
 	$( window ).scroll(function() {
 		var offset = $( window ).scrollTop();
