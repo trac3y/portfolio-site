@@ -41,7 +41,7 @@ $( document ).ready(function() {
 	// Flood screen on scroll and click of button
 	$( '.intro-button' ).click( function() {
 		$( 'html, body' ).animate({
-			scrollTop: $( '#about-section' ).offset().top - 300
+			scrollTop: $( '#about-section' ).offset().top
 		}, 900);
 		flood();
 	});

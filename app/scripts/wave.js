@@ -11,7 +11,7 @@ function initializePath() {
   center = view.center;
   width = view.size.width;
   // height = view.size.height - 200;
-  height = view.size.height - 1000;
+  height = view.size.height - 800;
   path.segments = [];
   path.add(view.bounds.topLeft);
   path.add(new Point(10, center.y));
